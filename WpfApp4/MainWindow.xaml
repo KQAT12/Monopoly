@@ -1,0 +1,1075 @@
+﻿<Window x:Class="WpfApp4.wplay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        AllowsTransparency="False"
+        Icon="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\rich.png"
+        Title="Monopoly" Height="980" Width="1700">
+    <Grid Background="#FF82BB83">
+        <Button x:Name="rollb" Content="Бросить кубики" HorizontalAlignment="Left" Margin="1270,164,0,0" VerticalAlignment="Top" Height="45" Width="100" Click="rollb_Click">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FFB3E5FC" Offset="0.1"/>
+                    <!-- Light Pastel Blue -->
+                    <GradientStop Color="#FFF8BBD0" Offset="0.5"/>
+                    <!-- Light Pastel Pink -->
+                    <GradientStop Color="#FFFFF9C4" Offset="1.0"/>
+                    <!-- Light Pastel Yellow -->
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <TextBox HorizontalAlignment="Left" Margin="810,794,0,0" TextWrapping="Wrap" Text="Старт" VerticalAlignment="Top" Width="150" Height="150" FontSize="30" TextAlignment="Center" FontWeight="Bold">
+            <TextBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="2,1">
+                    <GradientStop Color="#FFEDD5D5" Offset="0.0" />
+                    <!-- Белый цвет -->
+                    <GradientStop Color="#FFBCE3FB" Offset="0.5" />
+                    <!-- Очень светло-серый цвет -->
+                    <GradientStop Color="#FF77F954" Offset="1.0" />
+                    <GradientStop Color="#FFFFC6C6" Offset="1.0" />
+                    <!-- Светло-серый цвет -->
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+
+        <TextBox HorizontalAlignment="Left" Margin="0,-2,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="150" FontSize="30" TextAlignment="Center" FontWeight="Bold">
+
+            <TextBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#E0F7FA" Offset="0" />
+                    <!-- Нежно-голубой цвет -->
+                    <GradientStop Color="#81D4FA" Offset="0.3" />
+                    <GradientStop Color="#81D4FA" Offset="0.5" />
+                    <!-- Светло-голубой цвет -->
+                    <GradientStop Color="#29B6F6" Offset="0.9" />
+                </LinearGradientBrush>
+            </TextBox.Background>
+
+
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="0,794,0,0" TextWrapping="Wrap" Text="Тюрьма" VerticalAlignment="Top" Width="150" Height="150" FontSize="30" TextAlignment="Center" FontWeight="Bold">
+            <TextBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#8B0000" Offset="0.0" />
+                    <!-- Темный красный цвет -->
+                    <GradientStop Color="#B22222" Offset="0.5" />
+                    <!-- Огненно-красный цвет -->
+                    <GradientStop Color="#FF4500" Offset="1.0" />
+                    <!-- Оранжево-красный цвет -->
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="700,794,0,0" TextWrapping="Wrap" Text="Керчь" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF5BF508" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextAlignment="Center"                          
+/>
+        <TextBox HorizontalAlignment="Left" Margin="590,794,0,0" TextWrapping="Wrap" Text="Уплата налогов" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF9CDDFF" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextAlignment="Center"                 
+                 
+/>
+        <TextBox HorizontalAlignment="Left" Margin="260,794,0,0" TextWrapping="Wrap" Text="ШАНС" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFF5683E" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextAlignment="Center"                            
+/>
+        <TextBox HorizontalAlignment="Left" Margin="370,794,0,0" TextWrapping="Wrap" Text="Ялта" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF5BF508" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextAlignment="Center"        
+/>
+        <TextBox x:Name="bridgeTextBox" HorizontalAlignment="Left" Margin="480,794,0,0" TextWrapping="Wrap" Text="Мост" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFCCDEA8" BorderBrush="#FFC3CAE2" FontWeight="Bold"  TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Margin="150,794,0,0" Text="Севастополь" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF5BF508" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+/>
+        <TextBox HorizontalAlignment="Left" Margin="150,684,0,0" Text="Сочи" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFC7D200" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+        <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\pngwing.com.png" RenderTransformOrigin="0.5,0.5" Margin="921,149,385,535">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="2"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <TextBox HorizontalAlignment="Left" Margin="150,575,0,0" Text="Штраф" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFA8E455" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="150,466,0,0" Text="Туапсе" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFC7D200" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="roadTextBox" HorizontalAlignment="Left" Margin="150,359,0,0" Text="Дорога" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFCCDEA8" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="150,253,0,0" Text="Геленджик" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFC7D200" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="150,148,0,0" Text="ШАНС" VerticalAlignment="Top" Width="106" Height="150" FontSize="14" Background="#FFF5683E" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+
+
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="150,-2,0,0" Text="Москва" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFEF76E5" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="260,-2,0,0" Text="ШАНС" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFF5683E" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="370,-2,0,0" Text="Красногорск" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFEF76E5" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="PortTextBox" HorizontalAlignment="Left" Margin="480,-2,0,0" Text="Порт" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFCCDEA8" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="590,-2,0,0" Text="Балашиха" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFEF76E5" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="700,-2,0,0" Text="Бонус" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFF2F322" BorderBrush="#FFAAE07F" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center">
+            <TextBox.SelectionBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFF50404" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.SelectionBrush>
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="810,-2,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="150" FontSize="30" TextAlignment="Center" FontWeight="Bold">
+
+            <TextBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FF57DBEC" Offset="0.0" />
+                    <!-- Нежно-голубой цвет -->
+                    <GradientStop Color="#FF81FA9F" Offset="0.5" />
+                    <!-- Светло-голубой цвет -->
+                    <GradientStop Color="#FFEAC414" Offset="1.0" />
+                    <!-- Небесный голубой цвет -->
+                </LinearGradientBrush>
+            </TextBox.Background>
+
+
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="960,684,0,0" Text="Петербург" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF8FE0C5" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="960,575,0,0" Text="Штраф" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFA8E455" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="960,466,0,0" Text="Выборг" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF8FE0C5" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="airTextBox" HorizontalAlignment="Left" Margin="960,358,0,0" Text="Аэропорт" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FFCCDEA8" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+            >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="960,255,0,0" Text="Кировск" VerticalAlignment="Top" Width="110" Height="150" FontSize="16" Background="#FF8FE0C5" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="960,147,0,0" Text="Инвестиции" VerticalAlignment="Top" Width="107" Height="150" FontSize="16" Background="#FFF5683E" BorderBrush="#FFC3CAE2" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"
+>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="57*"/>
+                <ColumnDefinition Width="113*"/>
+            </Grid.ColumnDefinitions>
+
+            <Canvas Grid.ColumnSpan="2">
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\scale_1200 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="376" Canvas.Top="814" Width="93" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll1r1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\1111111111.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="316" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll2r1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\2.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="316" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll3r1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\3.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="316" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll4r1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\4.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="316" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll5r1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\5.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="316" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll6r1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\6.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="316" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\disney01 (1) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="3" Canvas.Top="694" Width="124" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\dostoprimechatelnosti-tuapse (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="3" Canvas.Top="477" Width="123" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\ns0PlRNeYZI (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="3" Canvas.Top="370" Width="123" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="spbimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\tild3063-3935-4261-b937-306563616462__photo (1) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="813" Canvas.Top="694" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="viborgimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\1-9023 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="813" Canvas.Top="477" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="kirovskumage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\DM5n3OjWAAAQ2wL (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="813" Canvas.Top="265" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\original-1rs5 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="813" Canvas.Top="371" Width="124" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\scale_1200 (2) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="90" Canvas.Left="3" Canvas.Top="264" Width="124" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\free-icon-donut-6586910.png" RenderTransformOrigin="0.5,0.5" Height="150" Canvas.Left="-2" Canvas.Top="-1" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\policeman.png" RenderTransformOrigin="0.5,0.5" Height="100" Canvas.Left="23" Canvas.Top="839" Width="125" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\coffee-cup.png" RenderTransformOrigin="0.5,0.5" Height="147" Canvas.Left="810" Canvas.Top="-1" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\sev.jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="157" Canvas.Top="815" Width="93" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\0_8323b_d828535_orig (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="155" Canvas.Top="20" Width="93" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\Krasnogorsk,_Moscow_Oblast,_Russia_-_panoramio_(118) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="377" Canvas.Top="20" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\morskie-porty-rossijskoj-federatsii-uvelichat-na-tret-svoi-moshchnosti (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="486" Canvas.Top="20" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.8">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="balahixaimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\962076aaa4be44787601c98a295649f6 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="597" Canvas.Top="20" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center" Opacity="0.8">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\most1.jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="486" Canvas.Top="815" Width="93" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\220px-Керч_крим (1).jpg" RenderTransformOrigin="0.5,0.5" Height="123" Canvas.Left="707" Canvas.Top="817" Width="93" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\cooperation.png" RenderTransformOrigin="0.588,0.486" Height="113" Canvas.Left="593" Canvas.Top="834" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\candlestick.png" RenderTransformOrigin="0,1.845" Height="128" Canvas.Left="258" Canvas.Top="814" Width="110" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\money-bag.png" RenderTransformOrigin="0.588,0.486" Height="108" Canvas.Left="708" Canvas.Top="34" Width="90" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+
+                <Label x:Name="turnplayer" Content="Ход игрока 1" Canvas.Left="1465" Canvas.Top="3" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="235" FontSize="35" RenderTransformOrigin="0.5,0.5" BorderBrush="#FF35634F" Background="#00000000" Foreground="#FF050312">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.506"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Button x:Name="buyb" Content="Купить" Canvas.Left="1270" Canvas.Top="264" Height="50" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FFB3E5FC" Offset="0.1"/>
+                            <!-- Light Pastel Blue -->
+                            <GradientStop Color="#FFF8BBD0" Offset="0.5"/>
+                            <!-- Light Pastel Pink -->
+                            <GradientStop Color="#FFFFF9C4" Offset="1.0"/>
+                            <!-- Light Pastel Yellow -->
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="balance1" Content="15000" Canvas.Left="1083" Canvas.Top="424" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
+                <Label x:Name="balance2" Content="15000" Canvas.Left="1485" Canvas.Top="424" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Rectangle Height="475" Canvas.Left="960" Stroke="Black" Canvas.Top="465" Width="315" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Rectangle Height="475" Canvas.Left="1375" Stroke="Black" Canvas.Top="465" Width="315" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\candlestick.png" RenderTransformOrigin="0,1.845" Height="128" Canvas.Left="258" Canvas.Top="24" Width="110" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\money.png" RenderTransformOrigin="0,1.845" Height="128" Canvas.Left="808" Canvas.Top="569" Width="130" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\money.png" RenderTransformOrigin="0,1.845" Height="128" Canvas.Left="2" Canvas.Top="569" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\earning.png" RenderTransformOrigin="0,1.845" Height="105" Canvas.Left="818" Canvas.Top="149" Width="109" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+
+                <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\candlestick.png" RenderTransformOrigin="0,1.845" Height="105" Canvas.Left="13" Canvas.Top="149" Width="131" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Ellipse x:Name="player2" Fill="Red" RenderTransformOrigin="0.8,0.202" Height="35" VerticalAlignment="Top" Canvas.Left="860" Canvas.Top="889" Width="35" HorizontalAlignment="Center">
+                    <Ellipse.Stroke>
+                        <SolidColorBrush Color="Black" Opacity="2"/>
+                    </Ellipse.Stroke>
+                </Ellipse>
+                <Ellipse x:Name="player1" Fill="Blue" RenderTransformOrigin="0.2,0.602" Height="35" VerticalAlignment="Center" Canvas.Left="860" Canvas.Top="844" Width="35" HorizontalAlignment="Left" Opacity="0.99">
+                    <Ellipse.Stroke>
+                        <SolidColorBrush Color="#FF010204" Opacity="3"/>
+                    </Ellipse.Stroke>
+                </Ellipse>
+                <Image x:Name="Kerchimage1" 
+       Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\220px-Керч_крим (1).jpg" 
+       RenderTransformOrigin="0.5,0.5" 
+       Height="125" 
+       Canvas.Left="970" 
+       Canvas.Top="469" 
+       Width="93" 
+       HorizontalAlignment="Left" 
+       VerticalAlignment="Center"
+       MouseLeftButtonDown="Kerchimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Yaltaimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\scale_1200 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1070" Canvas.Top="469" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       
+                       MouseLeftButtonDown="Yaltaimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Sevimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\sev.jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1170" Canvas.Top="469" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                              MouseLeftButtonDown="Sevimage1_MouseLeftButtonDown">
+
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Sochiimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\disney01 (1) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="973" Canvas.Top="612" Width="89" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="Sochiimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="timage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\dostoprimechatelnosti-tuapse (1).jpg" RenderTransformOrigin="0.5,0.5" Height="77" Canvas.Left="1073" Canvas.Top="612" Width="90" HorizontalAlignment="Center" VerticalAlignment="Top"
+                       MouseLeftButtonDown="timage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="gelenzikimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\scale_1200 (2) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="67" Canvas.Left="1170" Canvas.Top="612" Width="93" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="gelenzikimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="mskimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\0_8323b_d828535_orig (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="970" Canvas.Top="697" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       MouseLeftButtonDown="mskimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="krasnogorskimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\Krasnogorsk,_Moscow_Oblast,_Russia_-_panoramio_(118) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1070" Canvas.Top="698" Width="93" HorizontalAlignment="Center" VerticalAlignment="Top"
+                       MouseLeftButtonDown="krasnogorskimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="balachixaimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\962076aaa4be44787601c98a295649f6 (1).jpg" RenderTransformOrigin="5.011,2.708" Height="125" Canvas.Left="1170" Canvas.Top="699" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       MouseLeftButtonDown="balachixaimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="kirovskimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\DM5n3OjWAAAQ2wL (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="973" Canvas.Top="842" Width="89" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="kirovskimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="viborggimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\1-9023 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="1073" Canvas.Top="844" Width="89" HorizontalAlignment="Center" VerticalAlignment="Top"
+                       MouseLeftButtonDown="viborggimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="sapbimage1" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\tild3063-3935-4261-b937-306563616462__photo (1) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="1173" Canvas.Top="844" Width="89" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="sapbimage1_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Kerchimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\220px-Керч_крим (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1383" Canvas.Top="469" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       MouseLeftButtonDown="Kerchimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Yaltaimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\scale_1200 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1483" Canvas.Top="469" Width="93" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="Yaltaimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Sevimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\sev.jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1583" Canvas.Top="469" Width="93" HorizontalAlignment="Center" VerticalAlignment="Top"
+                MouseLeftButtonDown="Sevimage2_MouseLeftButtonDown">
+
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Sochiimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\disney01 (1) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="1383" Canvas.Top="612" Width="89" HorizontalAlignment="Left" VerticalAlignment="Top"
+                MouseLeftButtonDown="Sochiimage2_MouseLeftButtonDown">
+
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="timage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\dostoprimechatelnosti-tuapse (1).jpg" RenderTransformOrigin="0.5,0.5" Height="77" Canvas.Left="1483" Canvas.Top="612" Width="90" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="timage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="gelenzikimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\scale_1200 (2) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="67" Canvas.Left="1584" Canvas.Top="612" Width="93" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="gelenzikimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="mskimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\0_8323b_d828535_orig (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1380" Canvas.Top="698" Width="93" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="mskimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="krasnogorskimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\Krasnogorsk,_Moscow_Oblast,_Russia_-_panoramio_(118) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="125" Canvas.Left="1483" Canvas.Top="698" Width="93" HorizontalAlignment="Left" VerticalAlignment="Center"
+                       MouseLeftButtonDown="krasnogorskimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="balachixaimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\962076aaa4be44787601c98a295649f6 (1).jpg" RenderTransformOrigin="5.011,2.708" Height="125" Canvas.Left="1585" Canvas.Top="698" Width="93" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="balachixaimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="kirovskimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\DM5n3OjWAAAQ2wL (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="1383" Canvas.Top="844" Width="89" HorizontalAlignment="Center" VerticalAlignment="Top"
+                       MouseLeftButtonDown="kirovskimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="viborggimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\1-9023 (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="1484" Canvas.Top="844" Width="89" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="viborggimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="sapbimage2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\tild3063-3935-4261-b937-306563616462__photo (1) (1).jpg" RenderTransformOrigin="0.5,0.5" Height="70" Canvas.Left="1589" Canvas.Top="844" Width="89" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       MouseLeftButtonDown="sapbimage2_MouseLeftButtonDown">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll1r2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\1111111111.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="526" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll2r2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\2.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="526" Canvas.Top="424" Width="113" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll3r2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\3.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="526" Canvas.Top="424" Width="113" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll4r2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\4.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="526" Canvas.Top="424" Width="113" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll5r2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\5.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="526" Canvas.Top="424" Width="113" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="roll6r2" Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\6.png" RenderTransformOrigin="0.513,0.261" Height="115" Canvas.Left="526" Canvas.Top="424" Width="113" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="2"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Label Content="2200" Canvas.Left="735" Canvas.Top="812" Height="25" VerticalAlignment="Center" Width="50" HorizontalAlignment="Left" FontSize="14" FontWeight="Bold"/>
+                <Label Content="2000" Canvas.Left="514" Canvas.Top="809" Height="25" Width="42" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                <Label Content="2200" Canvas.Left="402" Canvas.Top="809" Height="25" Width="46" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                <Label Content="2400" Canvas.Left="187" Canvas.Top="809" Height="30" Width="43" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                <Label Content="3000" Canvas.Left="50" Canvas.Top="689" Height="30" Width="43" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.581,0.068"/>
+                <Label Content="3000" Canvas.Left="47" Canvas.Top="469" Height="30" Width="43" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                <Label Content="3300" Canvas.Left="47" Canvas.Top="259" Height="30" Width="43" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                <Label Content="2000" Canvas.Left="47" Canvas.Top="364" Height="30" Width="43" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                <Label Content="4000" Canvas.Left="182" Canvas.Top="13" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="3500" Canvas.Left="405" Canvas.Top="13" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="2000" Canvas.Left="515" Canvas.Top="14" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Content="3300" Canvas.Left="627" Canvas.Top="14" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="1600" Canvas.Left="857" Canvas.Top="257" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="2000" Canvas.Left="855" Canvas.Top="362" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="1900" Canvas.Left="857" Canvas.Top="471" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="2200" Canvas.Left="857" Canvas.Top="687" Height="30" Width="43" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            </Canvas>
+            <Image Source="C:\Users\maksi\source\repos\WpfApp4\WpfApp4\Resources\pngwing.com2.png" RenderTransformOrigin="0.5,0.5" Margin="755,149,-19,535" Grid.Column="1">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="2"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+        <Label x:Name="pl1" Content="" HorizontalAlignment="Left" Margin="1065,102,0,0" VerticalAlignment="Top" FontSize="24" />
+        <Label x:Name="pl2" Content="" HorizontalAlignment="Left" Margin="1473,102,0,0" VerticalAlignment="Top" FontSize="24" />
+
+    </Grid>
+
+
+
+</Window>
